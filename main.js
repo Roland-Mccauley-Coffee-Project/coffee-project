@@ -48,6 +48,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -55,3 +57,12 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+// New Code//
+(function(){
+    let light = document.getElementsByClassName("light");
+    // console.log(light);
+    for(let i =0; i<light.length; i++){
+        console.log(light);
+    }
+}());
