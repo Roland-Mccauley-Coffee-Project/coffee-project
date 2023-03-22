@@ -8,10 +8,18 @@ td, th {
     padding: 5px 10px;
 }
 
-.coffee-name{
-    float: right;
-}
+/*.coffee-name{*/
+/*    float: right;*/
+/*}*/
 
-roast{
-    float: right;
+/*.roast{*/
+/*    float: right;*/
+/*}*/
+
+.coffee-name, .roast{
+    display:flex;
+    flex-direction: column;
+}
+p{
+    color:lightgray;
 }
