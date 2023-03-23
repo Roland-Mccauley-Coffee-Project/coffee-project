@@ -62,44 +62,31 @@ let coffees = [
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
-let nameSelection = document.querySelector('#name');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-submitButton.addEventListener('keypress', updateCoffees);
 
 
 
 
-let coffeeName = document.getElementsByClassName('java');
-coffeeName.addEventListener("keyup", function(){
-    // 1. get input value from input box
-    // document.getElementById()
-    // 2. iterate through coffees
-    let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
-        //if the current coffee in my array contains the inputted value, then push it into my array
-        //Recommendation: use the .contains method(ex. coffees[i].name.contains(var that gets input))
-        // if() {
-            html += renderCoffee(coffees[i]);
-        // }else{
-        console.log("coffee not in filter")
-        // }
+let searchBox = document.getElementById('coffee-name');
+searchBox.addEventListener("keyup", function(){
+
+    let input = searchBox.value.toUpperCase();
+    let filteredCoffees = [];
+
+
+         for( let i = 0; i < coffees.length; i++){
+             if (coffees[i].name.toUpperCase().includes(input)){
+                 filteredCoffees.push(coffees[i])
+             }
     }
+    console.log(filteredCoffees);
+    tbody.innerHTML = renderCoffees(filteredCoffees)
 
-    //push the new array into renderCoffees function;
-    // tbody.innerHTML = renderCoffees(filterCoffees);
-    // console.log(coffeeName);
 })
-// function typeCoffee(){
-//     let selectedCoffee = nameSelection.value;
-//     // let filteredCoffees = [];
-//     for (let i = coffees.length -1; i >= 0; i--){
-//
-//     }
-
 
 
 
