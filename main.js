@@ -93,12 +93,12 @@ coffeeName.addEventListener("keyup", function(){
     // tbody.innerHTML = renderCoffees(filterCoffees);
     // console.log(coffeeName);
 })
-function typeCoffee(){
-    let selectedCoffee = nameSelection.value;
-    // let filteredCoffees = [];
-    for (let i = coffees.length -1; i >= 0; i--){
-
-    }
+// function typeCoffee(){
+//     let selectedCoffee = nameSelection.value;
+//     // let filteredCoffees = [];
+//     for (let i = coffees.length -1; i >= 0; i--){
+//
+//     }
 
 
 
