@@ -25,6 +25,8 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     //this is getting the value selected from the dropdown
     let selectedRoast = roastSelection.value;
+
+
     //this will be the new array of coffees with only my searched values
     let filteredCoffees = [];
     //this will iterate over our original array that we don't want to display but rather filter our
@@ -33,7 +35,13 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             //then push this valid coffee into my new array(filteredCoffees) so that this could be displayed in place of the original array
             filteredCoffees.push(coffee);
+        } else if(roastSelection.value === "all"){
+            filteredCoffees.push(coffee);
+
         }
+
+
+
     });
     //this section will display/render our coffees in our html
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -41,7 +49,7 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 1, name: 'Light City', roast: 'light' },
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
@@ -87,7 +95,6 @@ searchBox.addEventListener("keyup", function(){
     tbody.innerHTML = renderCoffees(filteredCoffees)
 
 })
-
 
 
 
