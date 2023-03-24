@@ -62,3 +62,9 @@ h4{
     color: black;
 
 }
+h1{
+    color:black;
+}
+#coffees{
+    columns: 2;
+}

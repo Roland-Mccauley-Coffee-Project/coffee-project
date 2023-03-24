@@ -58,11 +58,11 @@ let coffees = [
     {id: 7, name: 'High', roast: 'dark'},
     {id: 8, name: 'Continental', roast: 'dark'},
     {id: 9, name: 'New Orleans', roast: 'dark'},
-    // {id: 10, name: 'European', roast: 'dark'},
-    // {id: 11, name: 'Espresso', roast: 'dark'},
-    // {id: 12, name: 'Viennese', roast: 'dark'},
-    // {id: 13, name: 'Italian', roast: 'dark'},
-    // {id: 14, name: 'French', roast: 'dark'},
+    {id: 10, name: 'European', roast: 'dark'},
+    {id: 11, name: 'Espresso', roast: 'dark'},
+    {id: 12, name: 'Viennese', roast: 'dark'},
+    {id: 13, name: 'Italian', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'},
 ];
 
 // let coffeeNames= document.querySelector("#name");
@@ -95,6 +95,17 @@ searchBox.addEventListener("keyup", function(){
     tbody.innerHTML = renderCoffees(filteredCoffees)
 
 })
+
+let addCoffeeButton = document.querySelector('#submit2');
+addCoffeeButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    let coffeeNameInput = document.querySelector('#coffee-name2').value;
+    let roastLevelInput = document.querySelector('#roast-selection2').value;
+    let newCoffee = {id: coffees.length + 1, name :coffeeNameInput, roast:roastLevelInput}
+    coffees.push(newCoffee);
+    updateCoffees(e)
+});
+
 
 
 
