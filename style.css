@@ -29,6 +29,7 @@ p{
 h1{
     font-family: fantasy;
     color: black;
+
 }
 
 #submit{
@@ -54,4 +55,10 @@ i{
 
 p{
     color: darkgoldenrod;
+}
+
+h4{
+    font-family: fantasy;
+    color: black;
+
 }
