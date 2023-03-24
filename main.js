@@ -4,7 +4,7 @@ function renderCoffee(coffee) {
     //this is responsible for rendering one coffee
     let html = '<div class="java">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<h1>' + coffee.name + '</h1>';
+    html += '<h4>' + coffee.name + '</h4>';
     html += '<p>' + coffee.roast + '</p>';
     // html += '</tr>';
 
@@ -58,11 +58,11 @@ let coffees = [
     {id: 7, name: 'High', roast: 'dark'},
     {id: 8, name: 'Continental', roast: 'dark'},
     {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    // {id: 10, name: 'European', roast: 'dark'},
+    // {id: 11, name: 'Espresso', roast: 'dark'},
+    // {id: 12, name: 'Viennese', roast: 'dark'},
+    // {id: 13, name: 'Italian', roast: 'dark'},
+    // {id: 14, name: 'French', roast: 'dark'},
 ];
 
 // let coffeeNames= document.querySelector("#name");
